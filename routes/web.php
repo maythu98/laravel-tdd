@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/projects', [ProjectController::class, 'store']);
+Route::post('/projects', [ProjectController::class, 'store'])->name('projects');
 
 Route::get('/projects/{id}', [ProjectController::class, 'show']);
 

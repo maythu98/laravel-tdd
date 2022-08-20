@@ -3,16 +3,15 @@
 namespace Tests\Unit;
 
 use App\Models\Project;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class ProjectTest extends TestCase
 {
     /** @test */
-    public function model_has_a_path()
+    public function test_it_has_a_path()
     {
         $project = Project::factory()->create();
 
         $this->assertEquals($project->path(), "/projects/".$project->id);
-
     }
 }

@@ -6,9 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    Hello   
-    @foreach ($projects as $project)
-        {{ $project->title }}
-    @endforeach
+    <table>
+        <thead>
+            <tr>
+                <td>Title</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($projects as $project)
+            <tr>
+                <td> 
+                    <a href="{{ $project->path() }}"> {{ $project->title }} </a>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+    
 </body>
 </html>

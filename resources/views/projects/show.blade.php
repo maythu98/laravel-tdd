@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    {{ $project->title }}
-    {{ $project->description }}
+    <h1> {{ $project->title }} </h1>
+    <p> {{ $project->description }} </p>
+
+    <a href="{{ route('projects') }}">Home</a>
 </body>
 </html>
